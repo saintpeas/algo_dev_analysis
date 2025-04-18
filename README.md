@@ -1,3 +1,5 @@
+![Another image](https://en.wikipedia.org/wiki/C%2B%2B)
+
 # Data Structures and Demo
 
 This repository contains implementations of various data structures in C++, each applied to a real-world scenario across entertainment, productivity, and health domains. All source code is located in the src/ directory, with each data structure implemented in a separate .cpp file.
