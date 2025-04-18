@@ -4,6 +4,15 @@
 
 This repository contains implementations of various data structures in C++, each applied to a real-world scenario across entertainment, productivity, and health domains. All source code is located in the src/ directory, with each data structure implemented in a separate .cpp file.
 
+## Getting Started
+
+Each data structure folder in `src/` contains:
+- A `.cpp` file with the implementation and example usage.
+
+### Requirements
+- A C++ compiler (e.g., `g++`, `clang++`, or MSVC).
+- A terminal or command prompt for compilation and execution.
+
 ## Table of Contents
 - [Data Structures Implemented](#data-structures-implemented)
   - [SinglyLinkedList](#singly-linked-list-playlist-manager)
@@ -17,8 +26,9 @@ This repository contains implementations of various data structures in C++, each
   - [Searching](#searching)
   - [Sorting](#sorting)
 - [Folder Structure](#folder-structure)
-- [Prerequisites](#prerequisites)
 - [How to Compile and Run](#how-to-compile-and-run)
+
+
 
 ## Data Structures Implemented
 
@@ -304,5 +314,61 @@ vector<int> shortestPath(int start, int end) {
     return path;
 }
 ```
-
+## Demo
 [View Demo]()
+
+
+## Folder Structure
+```
+DataStructures_Applications/
+├── src/
+│   ├── singlylinkedlist/
+│   │   └── singlylinkedlist.cpp
+│   ├── doublylinkedlist/
+│   │   └── doublylinkedlist.cpp
+│   ├── circularlinkedlist/
+│   │   └── circularlinkedlist.cpp
+│   ├── stack/
+│   │   └── stack.cpp
+│   ├── queues/
+│   │   └── queues.cpp
+│   ├── heaps/
+│   │   ├── minheap.cpp
+│   │   └── maxheap.cpp
+│   ├── graphs/
+│   │   └── graphs.cpp
+│   ├── trees/
+│   │   └── trees.cpp
+│   ├── search/
+│   │   └── search.cpp
+└── README.md
+```
+
+## How to Compile and Run
+
+To compile and run a data structure program in this project, follow these steps:
+
+1. **Navigate to the desired folder**:
+   - Open a terminal or command prompt.
+   - Change to the folder containing the `.cpp` file, e.g.:
+     ```bash
+     cd src/singlylinkedlist
+     ```
+
+2. **Compile the program**:
+   - Use a C++ compiler (e.g., `g++`) to compile the `.cpp` file. For example:
+     ```bash
+     g++ -o myprogram singlylinkedlist.cpp
+     ```
+   - This creates an executable file named `myprogram`.
+
+3. **Run the program**:
+   - Execute the compiled program by running:
+     ```bash
+     ./myprogram
+     ```
+
+### Notes
+- Replace `singlylinkedlist.cpp` with the specific `.cpp` file name in the folder (e.g., `doublylinkedlist.cpp`, `graphs.cpp`).
+- Ensure a C++ compiler (e.g., `g++`, `clang++`, or MSVC) is installed.
+- If errors occur, check the `.cpp` file for specific compilation requirements or dependencies.
