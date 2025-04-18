@@ -50,18 +50,29 @@ void addSong(string title, string artist) {
 }
 ```
 
-### Data Structure
-
-The playlist is implemented as a singly linked list with:
-- A `Song` struct containing:
-  - `title` (string)
-  - `artist` (string) 
-  - `next` pointer to the next Song
-
-## Real-World Application
-
-This project simulates the core functionality of music streaming services like Spotify, Apple Music, or YouTube Music, where users create and manage playlists by adding or removing songs in a specific order.
 
 ## Demo
 
 [View Demo](insert-asciinema-link-here)
+
+## Doubly Linked List: Task Manager for To-Do List
+
+This program uses a doubly linked list to manage a to-do list. Users can add tasks, remove tasks by description, navigate forward or backward through the list, and display all tasks, facilitating task organization.
+
+## Overview
+
+The doubly linked list is implemented with a Task struct containing a description, prev, and next pointers.
+
+'addTask:' Inserts a new task after the current task, updating pointers bidirectionally.
+'removeTask:' Removes a task by description, adjusting prev and next pointers and updating the current task if needed.
+'goBack/goForward:' Navigates to the previous or next task, updating the current pointer.
+'displayTasks:' Traverses from the head to print all tasks.
+'Destructor:' Frees all nodes to prevent memory leaks.
+
+The main function adds sample tasks, displays the list, navigates backward, removes a task, and shows the updated list. The doubly linked list is suitable here because it allows efficient navigation in both directions, useful for reviewing or reordering tasks.
+
+## Demo
+
+[View Demo]()
+
+
