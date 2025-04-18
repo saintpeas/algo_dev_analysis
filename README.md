@@ -21,7 +21,7 @@ This repository contains implementations of various data structures in C++, each
 - [How to Compile and Run](#how-to-compile-and-run)
 
 # Singly Linked List: Playlist Manager
-  ###sinlgylinkedlist
+  ### sinlgylinkedlist
 
 A C++ application that uses a singly linked list data structure to manage a music playlist, similar to the functionality of music streaming services.
 
