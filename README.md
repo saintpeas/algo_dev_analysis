@@ -1,4 +1,4 @@
-![C++ Logo](cpplogo(1).png)
+![C++ Logo](cpplogo.png)
 
 # Data Structures and Demo
 
