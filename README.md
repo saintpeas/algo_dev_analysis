@@ -33,6 +33,8 @@ The singly linked list is implemented with a Song struct, containing title, arti
 - displayPlaylist: Iterates through the list to print song details.
 - Destructor: Frees all nodes to prevent memory leaks.
 
+The main function demonstrates usage by adding sample songs, displaying the playlist, removing a song, and showing the updated list. The singly linked list is ideal for this application because songs are typically played sequentially, and insertions/deletions are straightforward without needing bidirectional navigation.
+
 ## Code Sample
 
 ```cpp
@@ -70,6 +72,25 @@ The doubly linked list is implemented with a Task struct containing a descriptio
 - Destructor: Frees all nodes to prevent memory leaks.
 
 The main function adds sample tasks, displays the list, navigates backward, removes a task, and shows the updated list. The doubly linked list is suitable here because it allows efficient navigation in both directions, useful for reviewing or reordering tasks.
+
+## Code Sample
+
+'''cpp
+// Add a new task
+void addTask(string description) {
+    Task* newTask = new Task(description);
+    if (!head) {
+        head = current = newTask;
+    } else {
+        newTask->prev = current;
+        newTask->next = current->next;
+        if (current->next) {
+            current->next->prev = newTask;
+        }
+        current->next = newTask;
+        current = newTask;
+    }
+}'''
 
 ## Demo
 
