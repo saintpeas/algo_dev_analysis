@@ -75,22 +75,23 @@ The main function adds sample tasks, displays the list, navigates backward, remo
 
 ## Code Sample
 
-'''cpp
-// Add a new task
+```cpp
 void addTask(string description) {
-    Task* newTask = new Task(description);
-    if (!head) {
-        head = current = newTask;
-    } else {
-        newTask->prev = current;
-        newTask->next = current->next;
-        if (current->next) {
-            current->next->prev = newTask;
+        Task* newTask = new Task(description);
+        if (!head) {
+            head = current = newTask;
+        } else {
+            newTask->prev = current;
+            newTask->next = current->next;
+            if (current->next) {
+                current->next->prev = newTask;
+            }
+            current->next = newTask;
+            current = newTask;
         }
-        current->next = newTask;
-        current = newTask;
+        cout << "Added task: " << description << "\n";
     }
-}'''
+```
 
 ## Demo
 
