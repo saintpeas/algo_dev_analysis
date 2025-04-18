@@ -238,12 +238,12 @@ This program implements a graph data structure using an adjacency list represent
 
 The graph is implemented as an adjacency list using an unordered map where each node maps to a vector of its neighbors and corresponding edge weights. The Graph class provides:
 
-addEdge: Adds a weighted edge between two nodes (handles both directed and undirected graphs).
-printGraph: Displays the adjacency list representation of the graph.
-shortestPath: Implements Dijkstra's algorithm to find the shortest path between two nodes.
-longestPath: Approximates the longest simple path between two nodes (NP-hard problem).
-bfs: Performs breadth-first search to find a target node from a starting node.
-dfs: Performs depth-first search to find a target node from a starting node.
+- addEdge: Adds a weighted edge between two nodes (handles both directed and undirected graphs).
+- printGraph: Displays the adjacency list representation of the graph.
+- shortestPath: Implements Dijkstra's algorithm to find the shortest path between two nodes.
+- longestPath: Approximates the longest simple path between two nodes (NP-hard problem).
+- bfs: Performs breadth-first search to find a target node from a starting node.
+- dfs: Performs depth-first search to find a target node from a starting node.
 
 The main function creates a directed graph, adds weighted edges, and demonstrates each algorithm. This implementation is ideal for solving pathfinding problems, network analysis, and various graph-related applications.
 
