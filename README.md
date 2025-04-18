@@ -7,7 +7,7 @@ This repository contains implementations of various data structures in C++, each
 ## Table of Contents
 
 - [Data Structures Implemented](#data-structures-implemented)
-  - [SinglyLinkedList](#singlylinkedlist)
+  - [SinglyLinkedList](#/src/singlylinkedlist)
   - [DoublyLinkedList](#doublylinkedlist)
   - [CircularLinkedList](#circularlinkedlist)
   - [Queues](#queues)
