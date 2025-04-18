@@ -27,10 +27,11 @@ A C++ application that uses a singly linked list data structure to manage a musi
 
 ## Overview
 
-This application implements a playlist manager using a singly linked list data structure. Users can:
-- Add songs to the end of the playlist
-- Remove songs by their title
-- Display the entire playlist in sequence
+The singly linked list is implemented with a Song struct, containing title, artist, and a next pointer. The Playlist class manages the list with:
+- addSong: Adds a new song to the end by traversing to the last node.
+- removeSong: Removes a song by title, adjusting pointers and freeing memory.
+- displayPlaylist: Iterates through the list to print song details.
+- Destructor: Frees all nodes to prevent memory leaks.
 
 ## Code Sample
 
@@ -62,12 +63,11 @@ This program uses a doubly linked list to manage a to-do list. Users can add tas
 ## Overview
 
 The doubly linked list is implemented with a Task struct containing a description, prev, and next pointers.
-
-'addTask:' Inserts a new task after the current task, updating pointers bidirectionally.
-'removeTask:' Removes a task by description, adjusting prev and next pointers and updating the current task if needed.
-'goBack/goForward:' Navigates to the previous or next task, updating the current pointer.
-'displayTasks:' Traverses from the head to print all tasks.
-'Destructor:' Frees all nodes to prevent memory leaks.
+- addTask: Inserts a new task after the current task, updating pointers bidirectionally.
+- removeTask: Removes a task by description, adjusting prev and next pointers and updating the current task if needed.
+- goBack/goForward: Navigates to the previous or next task, updating the current pointer.
+- displayTasks: Traverses from the head to print all tasks.
+- Destructor: Frees all nodes to prevent memory leaks.
 
 The main function adds sample tasks, displays the list, navigates backward, removes a task, and shows the updated list. The doubly linked list is suitable here because it allows efficient navigation in both directions, useful for reviewing or reordering tasks.
 
