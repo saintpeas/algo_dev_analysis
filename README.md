@@ -1,4 +1,4 @@
-![Another image](https://en.wikipedia.org/wiki/C%2B%2B)
+![C++ Logo](c++.png)
 
 # Data Structures and Demo
 
