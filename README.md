@@ -5,17 +5,16 @@
 This repository contains implementations of various data structures in C++, each applied to a real-world scenario across entertainment, productivity, and health domains. All source code is located in the src/ directory, with each data structure implemented in a separate .cpp file.
 
 ## Table of Contents
-
 - [Data Structures Implemented](#data-structures-implemented)
-  - [SinglyLinkedList](singlylinkedlist)
+  - [SinglyLinkedList](#singly-linked-list-playlist-manager)
   - [DoublyLinkedList](#doublylinkedlist)
   - [CircularLinkedList](#circularlinkedlist)
   - [Queues](#queues)
   - [Stacks](#stacks)
   - [Heaps](#heaps)
   - [Trees](#trees)
-  - [Searching](#search)
-  - [Soring](#sorting)
+  - [Searching](#searching)
+  - [Sorting](#sorting)
 - [Folder Structure](#folder-structure)
 - [Prerequisites](#prerequisites)
 - [How to Compile and Run](#how-to-compile-and-run)
