@@ -13,7 +13,7 @@ This repository contains implementations of various data structures in C++, each
   - [Stacks](#stacks-undo-feature-in-text-editor)
   - [Heaps](#heaps-emergency-room-prioritization)
   - [Trees](#trees)
-  - [Graphs](#graphs-path-finding-&-traversal)
+  - [Graphs](#graphs-path-finding-and-traversal)
   - [Searching](#searching)
   - [Sorting](#sorting)
 - [Folder Structure](#folder-structure)
@@ -230,7 +230,7 @@ void extractMax() {
 ## Demo
 [View Demo]()
 
-## Graphs: Path Finding & Traversal
+## Graphs: Path Finding and Traversal
 
 This program implements a graph data structure using an adjacency list representation and provides implementations of common graph algorithms including Dijkstra's shortest path, longest path approximation, breadth-first search (BFS), and depth-first search (DFS).
 
