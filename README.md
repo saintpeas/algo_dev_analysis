@@ -25,7 +25,7 @@ This repository contains implementations of various data structures in C++, each
 
 A C++ application that uses a singly linked list data structure to manage a music playlist, similar to the functionality of music streaming services.
 
-## Overview
+## Explanation
 
 The singly linked list is implemented with a Song struct, containing title, artist, and a next pointer. The Playlist class manages the list with:
 - addSong: Adds a new song to the end by traversing to the last node.
@@ -62,14 +62,13 @@ void addSong(string title, string artist) {
 
 This program uses a doubly linked list to manage a to-do list. Users can add tasks, remove tasks by description, navigate forward or backward through the list, and display all tasks, facilitating task organization.
 
-## Overview
+## Explanation
 
 The doubly linked list is implemented with a Task struct containing a description, prev, and next pointers.
 - addTask: Inserts a new task after the current task, updating pointers bidirectionally.
 - removeTask: Removes a task by description, adjusting prev and next pointers and updating the current task if needed.
 - goBack/goForward: Navigates to the previous or next task, updating the current pointer.
 - displayTasks: Traverses from the head to print all tasks.
-- Destructor: Frees all nodes to prevent memory leaks.
 
 The main function adds sample tasks, displays the list, navigates backward, removes a task, and shows the updated list. The doubly linked list is suitable here because it allows efficient navigation in both directions, useful for reviewing or reordering tasks.
 
@@ -97,4 +96,212 @@ void addTask(string description) {
 
 [View Demo]()
 
+## Circular Linked List: Round-Robin Task Scheduler
 
+This program implements a circular linked list to schedule tasks in a round-robin fashion. Users can add tasks, execute the next task in a cycle, and display all tasks, ensuring fair task allocation.
+
+## Explanation
+
+This project implements a task scheduler using a circular linked list. Each task is represented by a Task struct, containing a taskName and a next pointer. The TaskScheduler class provides the following functionalities:
+
+   - addTask: Adds a new task to the circular list.
+   - executeNextTask: Moves to and executes the next task in the cycle.
+   - displayTasks: Prints all tasks in the list, starting from the next one.
+   - Destructor: Cleans up memory by breaking the circular structure and freeing all task nodes.
+
+The main function demonstrates the scheduler by adding sample tasks and executing them in a round-robin fashion. The circular linked list is well-suited for round-robin scheduling due to its inherent ability to cycle through tasks continuously.
+
+## Code Sample
+
+```cpp
+ void executeNextTask() {
+        if (!current) {
+            cout << "No tasks!\n";
+            return;
+        }
+        current = current->next;
+        cout << "Executing task: " << current->taskName << "\n";
+    }
+```
+
+## Demo
+
+[View Demo]()
+
+## Queues: Hospital Patient Queue
+
+This program implements a queue to manage a hospital patient waiting list. Users can add patients to the queue, remove the next patient for treatment, and display the current queue.
+
+## Explanation
+
+The queue is implemented with a Patient struct containing a name and next pointer. The HospitalQueue class manages:
+
+- enqueue: Adds a patient to the rear of the queue.
+- dequeue: Removes the patient at the front for treatment.
+- displayQueue: Prints all patients from front to rear.
+
+The main function adds sample patients, displays the queue, removes a patient, and shows the updated queue. The queue’s First-In-First-Out (FIFO) structure is ideal for managing patients based on arrival order.
+
+## Code Sample
+
+```cpp
+void enqueue(string name) {
+        Patient* newPatient = new Patient(name);
+        if (!rear) {
+            front = rear = newPatient;
+        } else {
+            rear->next = newPatient;
+            rear = newPatient;
+        }
+        cout << "Added patient: " << name << "\n";
+    }
+```
+
+## Demo
+
+[View Demo]()
+
+## Stacks: Undo Feature in Text Editor
+
+This program uses a stack to implement an undo feature in a text editor. Users can save text states, undo changes to revert to previous states, and display the current state.
+
+## Explanation
+
+The stack is implemented as an array (states) with a top index in the TextEditor class. Key operations include:
+
+- saveState: Pushes a new text state onto the stack if not full.
+- undo: Pops the top state to revert to the previous state.
+- displayCurrent: Shows the current top state.
+
+The main function saves sample text states, displays the current state, and performs undo operations. The stack is perfect for this application because it follows a Last-In-First-Out (LIFO) order, ideal for reverting changes in the reverse order they were made.
+
+## Code Sample
+
+```cpp
+void saveState(string text) {
+        if (top < MAX_SIZE - 1) {
+            states[++top] = text;
+            cout << "Saved: \"" << text << "\"\n";
+        } else {
+            cout << "Stack full, cannot save state!\n";
+        }
+    }
+```
+
+## Demo
+
+[View Demo]()
+
+## Heaps: Emergency Room Prioritization
+
+This program uses a max-heap to prioritize patients in an emergency room based on condition severity. Users can add patients with a priority, treat the highest-priority patient, and display the priority queue.
+
+## Explanation
+
+The max-heap is implemented using a vector<Patient> where Patient has a name and priority. The ERPriority class provides:
+
+- insert: Adds a patient and heapifies up to maintain the max-heap property.
+- extractMax: Removes and returns the highest-priority patient, heapifying down afterward.
+- displayHeap: Prints all patients and their priorities.
+- heapifyUp/heapifyDown: Maintain the heap structure after insertions and deletions.
+
+The main function adds sample patients, displays the heap, treats the highest-priority patient, and shows the updated heap. The max-heap is ideal for prioritizing patients, ensuring the most critical are treated first.
+
+Real-World Application: This simulates ER triage systems, where patients are prioritized based on the severity of their condition, as in hospital emergency departments.
+
+## Code Sample
+
+```cpp
+void extractMax() {
+        if (heap.empty()) {
+            cout << "No patients!\n";
+            return;
+        }
+        cout << "Treating: " << heap[0].name << " (Priority: " << heap[0].priority << ")\n";
+        heap[0] = heap.back();
+        heap.pop_back();
+        if (!heap.empty()) {
+            heapifyDown(0);
+        }
+    }
+```
+
+## Demo
+[View Demo]()
+
+## Graphs: Path Finding & Traversal
+
+This program implements a graph data structure using an adjacency list representation and provides implementations of common graph algorithms including Dijkstra's shortest path, longest path approximation, breadth-first search (BFS), and depth-first search (DFS).
+
+## Explanations: 
+
+The graph is implemented as an adjacency list using an unordered map where each node maps to a vector of its neighbors and corresponding edge weights. The Graph class provides:
+
+addEdge: Adds a weighted edge between two nodes (handles both directed and undirected graphs).
+printGraph: Displays the adjacency list representation of the graph.
+shortestPath: Implements Dijkstra's algorithm to find the shortest path between two nodes.
+longestPath: Approximates the longest simple path between two nodes (NP-hard problem).
+bfs: Performs breadth-first search to find a target node from a starting node.
+dfs: Performs depth-first search to find a target node from a starting node.
+
+The main function creates a directed graph, adds weighted edges, and demonstrates each algorithm. This implementation is ideal for solving pathfinding problems, network analysis, and various graph-related applications.
+
+## Code Sample
+
+```cpp
+// Dijkstra's algorithm for shortest path
+vector<int> shortestPath(int start, int end) {
+    // Priority queue for (distance, node)
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    
+    // Distance from start to all nodes
+    unordered_map<int, int> dist;
+    
+    // Previous node in path
+    unordered_map<int, int> prev;
+    
+    // Initialize distances
+    for (const auto& node : adjList) {
+        dist[node.first] = INT_MAX;
+        prev[node.first] = -1;
+    }
+    
+    dist[start] = 0;
+    pq.push({0, start});
+    
+    while (!pq.empty()) {
+        int u = pq.top().second;
+        pq.pop();
+        
+        if (u == end) break;
+        
+        for (const auto& neighbor : adjList[u]) {
+            int v = neighbor.first;
+            int weight = neighbor.second;
+            
+            if (dist[u] + weight < dist[v]) {
+                dist[v] = dist[u] + weight;
+                prev[v] = u;
+                pq.push({dist[v], v});
+            }
+        }
+    }
+    
+    // Reconstruct path
+    vector<int> path;
+    for (int at = end; at != -1; at = prev[at]) {
+        path.push_back(at);
+    }
+    reverse(path.begin(), path.end());
+    
+    if (path.size() == 1) {
+        // No path found
+        return {};
+    }
+    
+    cout << "Shortest path distance: " << dist[end] << endl;
+    return path;
+}
+```
+
+[View Demo]()
