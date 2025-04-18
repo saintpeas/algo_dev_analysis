@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <limits>
 
 using namespace std;
 
@@ -31,6 +32,7 @@ public:
             current = current->next;
         }
         current->next = newSong;
+        cout << "Added song: \"" << title << "\" by " << artist << "\n";
     }
 
     // Remove song by title
@@ -43,7 +45,7 @@ public:
             Song* temp = head;
             head = head->next;
             delete temp;
-            cout << "Removed: " << title << "\n";
+            cout << "Removed: \"" << title << "\"\n";
             return;
         }
         Song* current = head;
@@ -54,7 +56,7 @@ public:
             Song* temp = current->next;
             current->next = temp->next;
             delete temp;
-            cout << "Removed: " << title << "\n";
+            cout << "Removed: \"" << title << "\"\n";
         } else {
             cout << "Song not found!\n";
         }
@@ -67,11 +69,13 @@ public:
             return;
         }
         Song* current = head;
-        cout << "Playlist:\n";
+        cout << "\n===== Playlist =====\n";
+        int songNum = 1;
         while (current) {
-            cout << "Title: " << current->title << ", Artist: " << current->artist << "\n";
+            cout << songNum++ << ". \"" << current->title << "\" by " << current->artist << "\n";
             current = current->next;
         }
+        cout << "===================\n\n";
     }
 
     ~Playlist() {
@@ -84,13 +88,67 @@ public:
     }
 };
 
+// Display menu
+void displayMenu() {
+    cout << "\n===== Playlist Manager Menu =====\n";
+    cout << "1. Add new song\n";
+    cout << "2. Remove song\n";
+    cout << "3. Display playlist\n";
+    cout << "4. Exit\n";
+    cout << "Enter your choice (1-4): ";
+}
+
+void clearInputBuffer() {
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+}
+
 int main() {
     Playlist playlist;
-    playlist.addSong("Bohemian Rhapsody", "Queen");
-    playlist.addSong("Shape of You", "Ed Sheeran");
-    playlist.addSong("Imagine", "John Lennon");
-    playlist.displayPlaylist();
-    playlist.removeSong("Shape of You");
-    playlist.displayPlaylist();
+    int choice;
+    string title, artist;
+    bool running = true;
+
+    cout << "Welcome to the Playlist Manager!\n";
+
+    while (running) {
+        displayMenu();
+        
+        if (!(cin >> choice)) {
+            cout << "Invalid input. Please enter a number.\n";
+            clearInputBuffer();
+            continue;
+        }
+        clearInputBuffer();
+
+        switch (choice) {
+            case 1:  // Add song
+                cout << "Enter song title: ";
+                getline(cin, title);
+                cout << "Enter artist name: ";
+                getline(cin, artist);
+                playlist.addSong(title, artist);
+                break;
+                
+            case 2:  // Remove song
+                cout << "Enter song title to remove: ";
+                getline(cin, title);
+                playlist.removeSong(title);
+                break;
+                
+            case 3:  // Display playlist
+                playlist.displayPlaylist();
+                break;
+                
+            case 4:  // Exit
+                cout << "Exiting Playlist Manager. Goodbye!\n";
+                running = false;
+                break;
+                
+            default:
+                cout << "Invalid choice. Please enter a number between 1 and 4.\n";
+        }
+    }
+
     return 0;
 }
