@@ -20,7 +20,7 @@ Each data structure folder in `src/` contains:
   - [CircularLinkedList](#circular-linked-list-round-robin-task-scheduler)
   - [Queues](#queues-hospital-patient-queue)
   - [Stacks](#stacks-undo-feature-in-text-editor)
-  - [Heaps](#heaps-emergency-room-prioritization)
+  - [Heaps](#er-priority-queue-system-usin-min-heap)
   - [Trees](#trees)
   - [Graphs](#graphs-path-finding-and-traversal)
   - [Searching](#searching)
