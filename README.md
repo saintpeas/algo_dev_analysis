@@ -201,42 +201,55 @@ void saveState(string text) {
 
 [View Demo]()
 
-## Heaps: Emergency Room Prioritization
+# ER Priority Queue System Using Min-Heap
 
-This program uses a max-heap to prioritize patients in an emergency room based on condition severity. Users can add patients with a priority, treat the highest-priority patient, and display the priority queue.
+This program uses a min-heap to prioritize patients in an emergency room based on condition severity. Users can add patients with a priority level (1-5), treat the highest-priority patient, and display the current priority queue.
+
+## Priority System
+
+The priority system follows standard emergency room triage principles:
+- Priority 1: Immediate care needed (most critical)
+- Priority 2: Very urgent
+- Priority 3: Urgent
+- Priority 4: Standard care
+- Priority 5: Non-urgent (least critical)
+
+Lower numbers represent higher medical priority, ensuring the most critical patients are treated first.
 
 ## Explanation
 
-The max-heap is implemented using a vector<Patient> where Patient has a name and priority. The ERPriority class provides:
+The min-heap is implemented using a `vector<Patient>` where `Patient` has a name and priority level. The `ERPriority` class provides:
 
-- insert: Adds a patient and heapifies up to maintain the max-heap property.
-- extractMax: Removes and returns the highest-priority patient, heapifying down afterward.
-- displayHeap: Prints all patients and their priorities.
-- heapifyUp/heapifyDown: Maintain the heap structure after insertions and deletions.
-
-The main function adds sample patients, displays the heap, treats the highest-priority patient, and shows the updated heap. The max-heap is ideal for prioritizing patients, ensuring the most critical are treated first.
-
-Real-World Application: This simulates ER triage systems, where patients are prioritized based on the severity of their condition, as in hospital emergency departments.
+-insert: Adds a patient and heapifies up to maintain the min-heap property.
+-extractMin: Removes and returns the highest-priority patient (lowest number), heapifying down afterward.
+-displayHeap: Prints all patients and their priorities with descriptive labels.
+-heapifyUp/heapifyDown: Maintain the heap structure after insertions and deletions.
 
 ## Code Sample
 
 ```cpp
-void extractMax() {
-        if (heap.empty()) {
-            cout << "No patients!\n";
-            return;
-        }
-        cout << "Treating: " << heap[0].name << " (Priority: " << heap[0].priority << ")\n";
-        heap[0] = heap.back();
-        heap.pop_back();
-        if (!heap.empty()) {
-            heapifyDown(0);
+  void insert(string name, int priority) {
+        heap.push_back(Patient(name, priority));
+        heapifyUp(heap.size() - 1);
+        cout << "Added patient: " << name << " (Priority Level: " << priority << ") - ";
+        
+        // Provide context for the priority level
+        if (priority == 1) {
+            cout << "Immediate care needed\n";
+        } else if (priority == 2) {
+            cout << "Very urgent\n";
+        } else if (priority == 3) {
+            cout << "Urgent\n";
+        } else if (priority == 4) {
+            cout << "Standard care\n";
+        } else {
+            cout << "Non-urgent\n";
         }
     }
 ```
 
 ## Demo
-[View Demo]()
+[View Demo](https://asciinema.org/a/EB2D189YFEueaofUizSGF2nye)
 
 ## Graphs: Path Finding and Traversal
 
