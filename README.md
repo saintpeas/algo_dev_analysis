@@ -42,7 +42,6 @@ The singly linked list is implemented with a Song struct, containing title, arti
 - addSong: Adds a new song to the end by traversing to the last node.
 - removeSong: Removes a song by title, adjusting pointers and freeing memory.
 - displayPlaylist: Iterates through the list to print song details.
-- Destructor: Frees all nodes to prevent memory leaks.
 
 The main function demonstrates usage by adding sample songs, displaying the playlist, removing a song, and showing the updated list. The singly linked list is ideal for this application because songs are typically played sequentially, and insertions/deletions are straightforward without needing bidirectional navigation.
 
@@ -67,7 +66,7 @@ void addSong(string title, string artist) {
 
 ## Demo
 
-[View Demo](insert-asciinema-link-here)
+[View Demo](https://asciinema.org/a/F9UkcZHIlGwfJgd4yXw6FPQ9R)
 
 ## Doubly Linked List: Task Manager for To-Do List
 
