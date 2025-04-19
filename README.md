@@ -320,7 +320,7 @@ vector<int> shortestPath(int start, int end) {
 
 ## Folder Structure
 ```
-DataStructures_Applications/
+algo_dev_analysis/
 ├── src/
 │   ├── singlylinkedlist/
 │   │   └── singlylinkedlist.cpp
