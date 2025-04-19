@@ -204,7 +204,7 @@ void saveState(string text) {
 
 ## Demo
 
-[View Demo]()
+[View Demo](https://asciinema.org/a/gooI6701aYZlM9tCFezHeqrTa)
 
 ___
 
