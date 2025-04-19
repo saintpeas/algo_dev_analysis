@@ -201,7 +201,7 @@ void saveState(string text) {
 
 [View Demo]()
 
-# ER Priority Queue System Using Min-Heap
+# ER Priority Queue System Using Min Heap
 
 This program uses a min-heap to prioritize patients in an emergency room based on condition severity. Users can add patients with a priority level (1-5), treat the highest-priority patient, and display the current priority queue.
 
