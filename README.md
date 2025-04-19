@@ -136,7 +136,7 @@ The main function demonstrates the scheduler by adding sample tasks and executin
 
 ## Demo
 
-[View Demo]()
+[View Demo](https://asciinema.org/a/QoPEX8iBJsw2mFfEn5ktX4enQ)
 
 ## Queues: Hospital Patient Queue
 
