@@ -220,10 +220,10 @@ Lower numbers represent higher medical priority, ensuring the most critical pati
 
 The min-heap is implemented using a `vector<Patient>` where `Patient` has a name and priority level. The `ERPriority` class provides:
 
--insert: Adds a patient and heapifies up to maintain the min-heap property.
--extractMin: Removes and returns the highest-priority patient (lowest number), heapifying down afterward.
--displayHeap: Prints all patients and their priorities with descriptive labels.
--heapifyUp/heapifyDown: Maintain the heap structure after insertions and deletions.
+- insert: Adds a patient and heapifies up to maintain the min-heap property.
+- extractMin: Removes and returns the highest-priority patient (lowest number), heapifying down afterward.
+- displayHeap: Prints all patients and their priorities with descriptive labels.
+- heapifyUp/heapifyDown: Maintain the heap structure after insertions and deletions.
 
 ## Code Sample
 
