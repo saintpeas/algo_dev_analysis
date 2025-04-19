@@ -13,6 +13,7 @@ Each data structure folder in `src/` contains:
 - A C++ compiler (e.g., `g++`, `clang++`, or MSVC).
 - A terminal or command prompt for compilation and execution.
 
+___
 ## Table of Contents
 - [Data Structures Implemented](#data-structures-implemented)
   - [SinglyLinkedList](#singly-linked-list-playlist-manager)
@@ -28,7 +29,7 @@ Each data structure folder in `src/` contains:
 - [Folder Structure](#folder-structure)
 - [How to Compile and Run](#how-to-compile-and-run)
 
-
+___
 
 ## Data Structures Implemented
 
@@ -107,6 +108,7 @@ void addTask(string description) {
 
 [View Demo](https://asciinema.org/a/QoPEX8iBJsw2mFfEn5ktX4enQ)
 
+___
 ## Circular Linked List: Round-Robin Task Scheduler
 
 This program implements a circular linked list to schedule tasks in a round-robin fashion. Users can add tasks, execute the next task in a cycle, and display all tasks, ensuring fair task allocation.
@@ -138,6 +140,7 @@ The main function demonstrates the scheduler by adding sample tasks and executin
 
 [View Demo](https://asciinema.org/a/OEXAP5Udf0ddapXc5ZLqBsyHd)
 
+___
 ## Queues: Hospital Patient Queue
 
 This program implements a queue to manage a hospital patient waiting list. Users can add patients to the queue, remove the next patient for treatment, and display the current queue.
@@ -171,6 +174,7 @@ void enqueue(string name) {
 
 [View Demo](https://asciinema.org/a/FWwRNfsBX1golmEkdaYc47r8j)
 
+___
 ## Stacks: Undo Feature in Text Editor
 
 This program uses a stack to implement an undo feature in a text editor. Users can save text states, undo changes to revert to previous states, and display the current state.
@@ -201,6 +205,8 @@ void saveState(string text) {
 ## Demo
 
 [View Demo]()
+
+___
 
 # ER Priority Queue System Using Min Heap
 
@@ -252,6 +258,7 @@ The min-heap is implemented using a `vector<Patient>` where `Patient` has a name
 ## Demo
 [View Demo](https://asciinema.org/a/EB2D189YFEueaofUizSGF2nye)
 
+___
 ## Graphs: Path Finding and Traversal
 
 This program implements a graph data structure using an adjacency list representation and provides implementations of common graph algorithms including Dijkstra's shortest path, longest path approximation, breadth-first search (BFS), and depth-first search (DFS).
@@ -329,7 +336,7 @@ vector<int> shortestPath(int start, int end) {
 ## Demo
 [View Demo]()
 
-
+___
 ## Folder Structure
 ```
 algo_dev_analysis/
