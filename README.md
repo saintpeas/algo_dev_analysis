@@ -104,7 +104,7 @@ void addTask(string description) {
 
 ## Demo
 
-[View Demo]()
+[View Demo](https://asciinema.org/a/QoPEX8iBJsw2mFfEn5ktX4enQ)
 
 ## Circular Linked List: Round-Robin Task Scheduler
 
@@ -117,7 +117,6 @@ This project implements a task scheduler using a circular linked list. Each task
    - addTask: Adds a new task to the circular list.
    - executeNextTask: Moves to and executes the next task in the cycle.
    - displayTasks: Prints all tasks in the list, starting from the next one.
-   - Destructor: Cleans up memory by breaking the circular structure and freeing all task nodes.
 
 The main function demonstrates the scheduler by adding sample tasks and executing them in a round-robin fashion. The circular linked list is well-suited for round-robin scheduling due to its inherent ability to cycle through tasks continuously.
 
@@ -136,7 +135,7 @@ The main function demonstrates the scheduler by adding sample tasks and executin
 
 ## Demo
 
-[View Demo](https://asciinema.org/a/QoPEX8iBJsw2mFfEn5ktX4enQ)
+[View Demo](https://asciinema.org/a/OEXAP5Udf0ddapXc5ZLqBsyHd)
 
 ## Queues: Hospital Patient Queue
 
