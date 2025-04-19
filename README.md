@@ -68,6 +68,7 @@ void addSong(string title, string artist) {
 
 [View Demo](https://asciinema.org/a/F9UkcZHIlGwfJgd4yXw6FPQ9R)
 
+___
 ## Doubly Linked List: Task Manager for To-Do List
 
 This program uses a doubly linked list to manage a to-do list. Users can add tasks, remove tasks by description, navigate forward or backward through the list, and display all tasks, facilitating task organization.
