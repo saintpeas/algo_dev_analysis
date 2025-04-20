@@ -23,7 +23,7 @@ ___
   - [Stacks](#stacks-undo-feature-in-text-editor)
   - [Heaps](#heap--er-priority-queue-system)
   - [Trees](#binary-search-tree--book-catalog)
-  - [Graphs](#graph--metro-manila-navigation-system-for-ride--sharing-services)
+  - [Graphs](#graphs-metro-manila-navigation-system-for-ride-sharing-services)
   - [Searching](#searching)
   - [Sorting](#sorting)
 - [Folder Structure](#folder-structure)
