@@ -111,21 +111,21 @@ int main() {
         clearInputBuffer();
 
         switch (choice) {
-            case 1:  // Add patient
+            case 1:  
                 cout << "Enter patient name: ";
                 getline(cin, name);
                 queue.enqueue(name);
                 break;
                 
-            case 2:  // Treat patient
+            case 2:  
                 queue.dequeue();
                 break;
                 
-            case 3:  // Display queue
+            case 3:  
                 queue.displayQueue();
                 break;
                 
-            case 4:  // Exit
+            case 4:  
                 cout << "Exiting Hospital Queue System. Goodbye!\n";
                 running = false;
                 break;

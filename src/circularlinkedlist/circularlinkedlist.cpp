@@ -112,21 +112,21 @@ int main() {
         clearInputBuffer();
 
         switch (choice) {
-            case 1:  // Add task
+            case 1:  
                 cout << "Enter task name: ";
                 getline(cin, taskName);
                 scheduler.addTask(taskName);
                 break;
                 
-            case 2:  // Execute next task
+            case 2:  
                 scheduler.executeNextTask();
                 break;
                 
-            case 3:  // Display all tasks
+            case 3:  
                 scheduler.displayTasks();
                 break;
                 
-            case 4:  // Exit
+            case 4:  
                 cout << "Exiting Task Scheduler. Goodbye!\n";
                 running = false;
                 break;

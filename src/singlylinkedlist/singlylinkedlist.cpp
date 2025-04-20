@@ -122,7 +122,7 @@ int main() {
         clearInputBuffer();
 
         switch (choice) {
-            case 1:  // Add song
+            case 1:
                 cout << "Enter song title: ";
                 getline(cin, title);
                 cout << "Enter artist name: ";
@@ -130,17 +130,17 @@ int main() {
                 playlist.addSong(title, artist);
                 break;
                 
-            case 2:  // Remove song
+            case 2:
                 cout << "Enter song title to remove: ";
                 getline(cin, title);
                 playlist.removeSong(title);
                 break;
                 
-            case 3:  // Display playlist
+            case 3:
                 playlist.displayPlaylist();
                 break;
                 
-            case 4:  // Exit
+            case 4:
                 cout << "Exiting Playlist Manager. Goodbye!\n";
                 running = false;
                 break;

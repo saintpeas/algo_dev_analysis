@@ -147,7 +147,7 @@ int main() {
         clearInputBuffer();
 
         switch (choice) {
-            case 1:  // Add patient
+            case 1:  
                 cout << "Enter patient name: ";
                 getline(cin, name);
                 cout << "Enter priority level (1=critical, 2=very urgent, 3=urgent, 4=standard, 5=non-urgent): ";
@@ -161,15 +161,15 @@ int main() {
                 er.insert(name, priority);
                 break;
                 
-            case 2:  // Treat highest priority patient
+            case 2:  
                 er.extractMin();
                 break;
                 
-            case 3:  // Display queue
+            case 3: 
                 er.displayHeap();
                 break;
                 
-            case 4:  // Exit
+            case 4:
                 cout << "Exiting ER Priority System. Goodbye!\n";
                 running = false;
                 break;
@@ -180,4 +180,4 @@ int main() {
     }
 
     return 0;
-}
+} 

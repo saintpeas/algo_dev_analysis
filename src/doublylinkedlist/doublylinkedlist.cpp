@@ -4,7 +4,6 @@
 
 using namespace std;
 
-// Node for the doubly linked list
 struct Task {
     string description;
     Task* prev;
@@ -158,38 +157,38 @@ int main() {
             clearInputBuffer();
             continue;
         }
-        clearInputBuffer();  // Clear any remaining input
+        clearInputBuffer();  
 
         switch (choice) {
-            case 1:  // Add task
+            case 1:  
                 cout << "Enter task description: ";
                 getline(cin, taskDescription);
                 todo.addTask(taskDescription);
                 break;
                 
-            case 2:  // Remove task
+            case 2:  
                 cout << "Enter task description to remove: ";
                 getline(cin, taskDescription);
                 todo.removeTask(taskDescription);
                 break;
                 
-            case 3:  // Go to previous task
+            case 3:  
                 todo.goBack();
                 break;
                 
-            case 4:  // Go to next task
+            case 4:  
                 todo.goForward();
                 break;
                 
-            case 5:  // Display all tasks
+            case 5:  
                 todo.displayTasks();
                 break;
                 
-            case 6:  // Show current task
+            case 6:  
                 todo.showCurrentTask();
                 break;
                 
-            case 7:  // Exit
+            case 7:  
                 cout << "Exiting Task Manager. Goodbye!\n";
                 running = false;
                 break;
