@@ -1,4 +1,4 @@
-   ![C++ Logo](c++(1).png)
+![C++ Logo](c++(1).png)
 
 # Data Structures and Demo
 
@@ -21,7 +21,7 @@ ___
   - [CircularLinkedList](#circular-linked-list-round-robin-task-scheduler)
   - [Queues](#queues-hospital-patient-queue)
   - [Stacks](#stacks-undo-feature-in-text-editor)
-  - [Heap](#heap-er-priority-queue-system)
+  - [Heaps](#heaps-er-priority-queue-system)
   - [Trees](#binary-search-tree-book-catalog)
   - [Graphs](#graphs-metro-manila-navigation-system-for-ride-sharing-services)
   - [Searching](#searching)
@@ -208,7 +208,7 @@ void saveState(string text) {
 
 ___
 
-# Heap: ER Priority Queue System
+# Heaps: ER Priority Queue System
 
 This program uses a min-heap to prioritize patients in an emergency room based on condition severity. Users can add patients with a priority level (1-5), treat the highest-priority patient, and display the current priority queue.
 
@@ -374,28 +374,26 @@ Book* BookCatalog::insertBook(Book* node, int id, string title, string author, i
 
 ___
 ## Folder Structure
+
 ```
-algo_dev_analysis/
+DataStructures_Applications/
 ├── src/
 │   ├── singlylinkedlist/
-│   │   └── singlylinkedlist.cpp
+│   │   ├── singlylinkedlist.cpp
 │   ├── doublylinkedlist/
-│   │   └── doublylinkedlist.cpp
+│   │   ├── doublylinkedlist.cpp
 │   ├── circularlinkedlist/
-│   │   └── circularlinkedlist.cpp
-│   ├── stack/
-│   │   └── stack.cpp
+│   │   ├── circularlinkedlist.cpp
 │   ├── queues/
-│   │   └── queues.cpp
+│   │   ├── queues.cpp
+│   ├── stacks/
+│   │   ├── stacks.cpp
 │   ├── heaps/
-│   │   ├── minheap.cpp
-│   │   └── maxheap.cpp
-│   ├── graphs/
-│   │   └── graphs.cpp
+│   │   ├── heaps.cpp
 │   ├── trees/
-│   │   └── binarysearchtree.cpp
-│   ├── search/
-│   │   └── search.cpp
+│   │   ├── trees.cpp
+│   ├── graphs/
+│   │   ├── graphs.cpp
 └── README.md
 ```
 
