@@ -21,9 +21,9 @@ ___
   - [CircularLinkedList](#circular-linked-list-round-robin-task-scheduler)
   - [Queues](#queues-hospital-patient-queue)
   - [Stacks](#stacks-undo-feature-in-text-editor)
-  - [Heaps](#er-priority-queue-system-using-min-heap)
+  - [Heaps](#heap--er-priority-queue-system)
   - [Trees](#binary-search-tree--book-catalog)
-  - [Graphs](#graphs-path-finding-and-traversal)
+  - [Graphs](#graph--metro-manila-navigation-system-for-ride--sharing-services)
   - [Searching](#searching)
   - [Sorting](#sorting)
 - [Folder Structure](#folder-structure)
@@ -208,7 +208,7 @@ void saveState(string text) {
 
 ___
 
-# ER Priority Queue System Using Min Heap
+# Heap: ER Priority Queue System
 
 This program uses a min-heap to prioritize patients in an emergency room based on condition severity. Users can add patients with a priority level (1-5), treat the highest-priority patient, and display the current priority queue.
 
