@@ -259,83 +259,76 @@ The min-heap is implemented using a `vector<Patient>` where `Patient` has a name
 [View Demo](https://asciinema.org/a/EB2D189YFEueaofUizSGF2nye)
 
 ___
-## Graphs: Path Finding and Traversal
+# Graph: Metro Manila Navigation System for Ride-Sharing Services
 
-This program implements a graph data structure using an adjacency list representation and provides implementations of common graph algorithms including Dijkstra's shortest path, longest path approximation, breadth-first search (BFS), and depth-first search (DFS).
+This program implements a graph using an adjacency list to plan routes for ride-sharing drivers in Metro Manila. Users can add roads between city locations, find the shortest or longest routes, and check if destinations are reachable using Breadth-First Search (BFS) and Depth-First Search (DFS), optimizing navigation.
 
-## Explanations: 
+## Explanation
 
-The graph is implemented as an adjacency list using an unordered map where each node maps to a vector of its neighbors and corresponding edge weights. The Graph class provides:
+The graph is implemented using an `unordered_map<int, vector<pair<int, int>>>` for an adjacency list, where each location (represented by an integer ID) maps to a list of its neighbors. Each neighbor in the list is a `pair<int, int>`, containing the neighbor's ID and the travel time (weight) of the road connecting to it.
 
-- addEdge: Adds a weighted edge between two nodes (handles both directed and undirected graphs).
-- printGraph: Displays the adjacency list representation of the graph.
-- shortestPath: Implements Dijkstra's algorithm to find the shortest path between two nodes.
-- longestPath: Approximates the longest simple path between two nodes (NP-hard problem).
-- bfs: Performs breadth-first search to find a target node from a starting node.
-- dfs: Performs depth-first search to find a target node from a starting node.
+Location names (e.g., "Makati", "NAIA") are internally mapped to integer IDs for efficient graph representation and processing.
 
-The main function creates a directed graph, adds weighted edges, and demonstrates each algorithm. This implementation is ideal for solving pathfinding problems, network analysis, and various graph-related applications.
+The `MetroManilaNavigation` class provides the following functionalities:
+
+-   **`addLocation(const string& locationName)` / `addRoad(const string& startLocation, const string& endLocation, int travelTime)`:** Methods to add new locations to the map and establish roads (edges) between them, along with their associated travel times.
+-   **`printMap()`:** Displays the current city map, showing the connections between locations and their respective travel times.
+-   **`shortestRoute(const string& startLocation, const string& endLocation)`:** Utilizes Dijkstra’s algorithm to find the route with the minimum total travel time between two specified locations.
+-   **`longestRoute(const string& startLocation, const string& endLocation)`:** Employs dynamic programming to determine the route with the maximum total travel time between two specified locations.
+-   **`bfs(const string& startLocation, const string& endLocation)` / `dfs(const string& startLocation, const string& endLocation)`:** Methods to check if a destination location is reachable from a starting location using Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms, respectively.
+-   **`dfsUtil(int v, unordered_map<int, bool>& visited, int target)`:** A helper method used internally by the `dfs` function for recursive Depth-First Search traversal.
+
+The main function provides a command-line interface with a menu-driven system. This allows users to:
+
+- Set up and manage a simulated Metro Manila map by adding locations and roads.
+- Find the shortest and longest routes between any two locations on the map.
+- Check the reachability of a destination from a starting point using BFS and DFS.
+
+The underlying graph structure effectively models the locations in Metro Manila as nodes and the roads connecting them as edges, with travel times acting as weights on these edges.
 
 ## Code Sample
 
 ```cpp
-// Dijkstra's algorithm for shortest path
-vector<int> shortestPath(int start, int end) {
-    // Priority queue for (distance, node)
+vector<int> shortestRoute(int start, int end) {
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
-    
-    // Distance from start to all nodes
     unordered_map<int, int> dist;
-    
-    // Previous node in path
     unordered_map<int, int> prev;
-    
-    // Initialize distances
-    for (const auto& node : adjList) {
-        dist[node.first] = INT_MAX;
-        prev[node.first] = -1;
+    for (const auto& location : locationNames) {
+        dist[location.first] = INT_MAX;
+        prev[location.first] = -1;
     }
-    
     dist[start] = 0;
     pq.push({0, start});
-    
     while (!pq.empty()) {
         int u = pq.top().second;
         pq.pop();
-        
         if (u == end) break;
-        
-        for (const auto& neighbor : adjList[u]) {
-            int v = neighbor.first;
-            int weight = neighbor.second;
-            
-            if (dist[u] + weight < dist[v]) {
-                dist[v] = dist[u] + weight;
-                prev[v] = u;
-                pq.push({dist[v], v});
+        if (adjList.find(u) != adjList.end()) {
+            for (const auto& neighbor : adjList[u]) {
+                int v = neighbor.first;
+                int travel_time = neighbor.second;
+                if (dist[u] + travel_time < dist[v]) {
+                    dist[v] = dist[u] + travel_time;
+                    prev[v] = u;
+                    pq.push({dist[v], v});
+                }
             }
         }
     }
-    
-    // Reconstruct path
-    vector<int> path;
+    vector<int> route;
     for (int at = end; at != -1; at = prev[at]) {
-        path.push_back(at);
+        route.push_back(at);
     }
-    reverse(path.begin(), path.end());
-    
-    if (path.size() == 1) {
-        // No path found
+    reverse(route.begin(), route.end());
+    if (route.size() <= 1) {
         return {};
     }
-    
-    cout << "Shortest path distance: " << dist[end] << endl;
-    return path;
+    cout << "\nShortest route travel time: " << dist[end] << " minutes\n";
+    return route;
 }
 ```
-## Demo
-[View Demo](https://asciinema.org/a/K0HNBbL03ypR1pW2jlxm26eut)
 
+[View Demo](https://asciinema.org/a/K0HNBbL03ypR1pW2jlxm26eut)
 ___
 
 ## Binary Search Tree: Book Catalog
