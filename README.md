@@ -22,8 +22,8 @@ ___
   - [Queues](#queues-hospital-patient-queue)
   - [Stacks](#stacks-undo-feature-in-text-editor)
   - [Heaps](#heaps-er-priority-queue-system)
-  - [Trees](#binary-search-tree-book-catalog)
   - [Graphs](#graphs-metro-manila-navigation-system-for-ride-sharing-services)
+  - [Trees](#binary-search-tree-book-catalog)
 - [Folder Structure](#folder-structure)
 - [How to Compile and Run](#how-to-compile-and-run)
 
@@ -377,21 +377,21 @@ ___
 algo_dev_analysis/
 ├── src/
 │   ├── singlylinkedlist/
-│   │   ├── singlylinkedlist.cpp
+│   │   └── singlylinkedlist.cpp
 │   ├── doublylinkedlist/
-│   │   ├── doublylinkedlist.cpp
+│   │   └── doublylinkedlist.cpp
 │   ├── circularlinkedlist/
-│   │   ├── circularlinkedlist.cpp
+│   │   └── circularlinkedlist.cpp
 │   ├── queues/
-│   │   ├── queues.cpp
+│   │   └── queues.cpp
 │   ├── stacks/
-│   │   ├── stacks.cpp
+│   │   └── stacks.cpp
 │   ├── heaps/
-│   │   ├── heaps.cpp
-│   ├── trees/
-│   │   ├── binarysearchtrees.cpp
+│   │   └── heaps.cpp
 │   ├── graphs/
-│   │   ├── graphs.cpp
+│   │   └── graphs.cpp
+│   └── trees/
+│   │   └── binarysearchtrees.cpp
 └── c++(1).png
 └── README.md
 ```
