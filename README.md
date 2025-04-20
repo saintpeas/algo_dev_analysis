@@ -1,4 +1,4 @@
- ![C++ Logo](c++(1).png)
+   ![C++ Logo](c++(1).png)
 
 # Data Structures and Demo
 
@@ -22,7 +22,7 @@ ___
   - [Queues](#queues-hospital-patient-queue)
   - [Stacks](#stacks-undo-feature-in-text-editor)
   - [Heaps](#er-priority-queue-system-using-min-heap)
-  - [Trees](#trees)
+  - [Trees](#binary-search-tree--book-catalog)
   - [Graphs](#graphs-path-finding-and-traversal)
   - [Searching](#searching)
   - [Sorting](#sorting)
