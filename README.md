@@ -22,7 +22,7 @@ ___
   - [Queues](#queues-hospital-patient-queue)
   - [Stacks](#stacks-undo-feature-in-text-editor)
   - [Heap](#heap-er-priority-queue-system)
-  - [Trees](#binary-search-tree--book-catalog)
+  - [Trees](#binary-search-tree-book-catalog)
   - [Graphs](#graphs-metro-manila-navigation-system-for-ride-sharing-services)
   - [Searching](#searching)
   - [Sorting](#sorting)
