@@ -374,7 +374,7 @@ ___
 ## Folder Structure
 
 ```
-DataStructures_Applications/
+algo_dev_analysis/
 ├── src/
 │   ├── singlylinkedlist/
 │   │   ├── singlylinkedlist.cpp
@@ -389,9 +389,10 @@ DataStructures_Applications/
 │   ├── heaps/
 │   │   ├── heaps.cpp
 │   ├── trees/
-│   │   ├── trees.cpp
+│   │   ├── binarysearchtrees.cpp
 │   ├── graphs/
 │   │   ├── graphs.cpp
+└── c++(1).png
 └── README.md
 ```
 
