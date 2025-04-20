@@ -259,7 +259,7 @@ The min-heap is implemented using a `vector<Patient>` where `Patient` has a name
 [View Demo](https://asciinema.org/a/EB2D189YFEueaofUizSGF2nye)
 
 ___
-# Graph: Metro Manila Navigation System for Ride-Sharing Services
+# Graphs: Metro Manila Navigation System for Ride-Sharing Services
 
 This program implements a graph using an adjacency list to plan routes for ride-sharing drivers in Metro Manila. Users can add roads between city locations, find the shortest or longest routes, and check if destinations are reachable using Breadth-First Search (BFS) and Depth-First Search (DFS), optimizing navigation.
 
