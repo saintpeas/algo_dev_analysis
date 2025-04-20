@@ -21,7 +21,7 @@ ___
   - [CircularLinkedList](#circular-linked-list-round-robin-task-scheduler)
   - [Queues](#queues-hospital-patient-queue)
   - [Stacks](#stacks-undo-feature-in-text-editor)
-  - [Heaps](#heap-er-priority-queue-system)
+  - [Heap](#heap-er-priority-queue-system)
   - [Trees](#binary-search-tree--book-catalog)
   - [Graphs](#graphs-metro-manila-navigation-system-for-ride-sharing-services)
   - [Searching](#searching)
