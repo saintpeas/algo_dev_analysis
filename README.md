@@ -24,8 +24,6 @@ ___
   - [Heaps](#heaps-er-priority-queue-system)
   - [Trees](#binary-search-tree-book-catalog)
   - [Graphs](#graphs-metro-manila-navigation-system-for-ride-sharing-services)
-  - [Searching](#searching)
-  - [Sorting](#sorting)
 - [Folder Structure](#folder-structure)
 - [How to Compile and Run](#how-to-compile-and-run)
 
