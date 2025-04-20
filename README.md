@@ -1,4 +1,4 @@
-![C++ Logo](c++(1).png)
+ ![C++ Logo](c++(1).png)
 
 # Data Structures and Demo
 
@@ -337,6 +337,49 @@ vector<int> shortestPath(int start, int end) {
 [View Demo]()
 
 ___
+
+## Binary Search Tree: Book Catalog
+
+A C++ application that uses a binary search tree data structure to manage a book catalog, similar to how a library or bookstore might catalog their inventory.
+
+## Explanation
+
+The binary search tree is implemented with a Book struct, containing id, title, author, year, and left/right pointers. The BookCatalog class manages the tree with:
+
+- addBook: Adds a new book to the tree based on its ID, maintaining the BST property.
+- displayAllBooks: Performs an in-order traversal to print books in sorted order by ID.
+- displayAllBooksPreOrder: Performs a pre-order traversal to show the actual tree structure.
+- searchBook & displayBook: Efficiently search for a book by ID using the BST property.
+- deleteBook: Removes a book by ID, handling all cases (leaf, one child, two children).
+
+The main function demonstrates usage by adding sample books, displaying the catalog in different traversal orders, searching for specific books, and removing books from the catalog.
+
+The binary search tree is ideal for this application because it provides O(log n) search, insertion, and deletion operations, making it efficient for managing a large catalog of books. The tree structure automatically maintains books in sorted order by ID, allowing for quick lookup and range queries.
+
+## Code Sample
+
+```cpp
+// Adding a book to the catalog
+Book* BookCatalog::insertBook(Book* node, int id, string title, string author, int year) {
+    if (node == nullptr) {
+        return new Book(id, title, author, year);
+    }
+    
+    if (id < node->id) {
+        node->left = insertBook(node->left, id, title, author, year);
+    } else if (id > node->id) {
+        node->right = insertBook(node->right, id, title, author, year);
+    } else {
+        cout << "Error: Book with ID " << id << " already exists!\n";
+    }
+    
+    return node;
+}
+```
+
+[View Demo](https://asciinema.org/a/P4gj7Wtp8xT2A8f2AIbwVD3GT)
+
+___
 ## Folder Structure
 ```
 algo_dev_analysis/
@@ -357,7 +400,7 @@ algo_dev_analysis/
 │   ├── graphs/
 │   │   └── graphs.cpp
 │   ├── trees/
-│   │   └── trees.cpp
+│   │   └── binarysearchtree.cpp
 │   ├── search/
 │   │   └── search.cpp
 └── README.md
